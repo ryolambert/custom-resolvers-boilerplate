@@ -21,7 +21,7 @@ export const getRemoteSchema = async (uri, headers) => {
 
 /* create an apollo-link instance that makes
  WS connection for subscriptions and
- HTTP connection for queries andm utations
+ HTTP connection for queries and  mutations
 */
 const makeHttpAndWsLink = (uri, headers) => {
 
@@ -59,4 +59,3 @@ const makeHttpAndWsLink = (uri, headers) => {
 
   return link;
 };
-

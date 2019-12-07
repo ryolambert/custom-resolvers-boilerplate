@@ -4,6 +4,7 @@ import { mergeSchemas, makeExecutableSchema } from 'graphql-tools';
 import { getRemoteSchema } from './utils';
 import typeDefs from './typeDefs/customTypeDefs';
 import resolvers from './resolvers/customResolvers';
+// import ShardInfoAPI from './dataSources/ShardInfoAPI';
 
 const HASURA_GRAPHQL_ENGINE_URL = process.env.HASURA_GRAPHQL_ENGINE_URL || `https://bazookaand.herokuapp.com`;
 const HASURA_GRAPHQL_API_URL = HASURA_GRAPHQL_ENGINE_URL + '/v1alpha1/graphql';
@@ -21,6 +22,12 @@ const runServer = async () => {
   const executableCustomSchema = makeExecutableSchema({
     typeDefs,
     resolvers,
+  //!! Example of Rest Datasource
+  //   dataSources: () => {
+  //   return {
+  //     shardInfoAPI: new ShardInfoAPI(),
+  //   };
+  // },
   });
 
   // merge custom resolvers with Hasura schema
