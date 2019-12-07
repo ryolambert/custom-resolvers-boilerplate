@@ -2,8 +2,8 @@ import fetch from 'node-fetch';
 import { ApolloServer } from 'apollo-server';
 import { mergeSchemas, makeExecutableSchema } from 'graphql-tools';
 import { getRemoteSchema } from './utils';
-import typeDefs from './customTypeDefs';
-import resolvers from './customResolvers';
+import typeDefs from './typeDefs/customTypeDefs';
+import resolvers from './resolvers/customResolvers';
 
 const HASURA_GRAPHQL_ENGINE_URL = process.env.HASURA_GRAPHQL_ENGINE_URL || `https://bazookaand.herokuapp.com`;
 const HASURA_GRAPHQL_API_URL = HASURA_GRAPHQL_ENGINE_URL + '/v1alpha1/graphql';
