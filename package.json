@@ -19,7 +19,7 @@
     "esm": "^3.2.25",
     "graphql": "^14.5.8",
     "graphql-tools-with-subscriptions": "^1.0.0",
-    "knex": "^0.20.3",
+    "knex": "^2.4.0",
     "node-fetch": "^2.6.0",
     "pg": "^7.14.0",
     "subscriptions-transport-ws": "^0.9.16",
